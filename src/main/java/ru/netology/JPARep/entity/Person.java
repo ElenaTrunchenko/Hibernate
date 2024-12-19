@@ -27,6 +27,6 @@ public class Person {
     private String city;
 
     @Column(name = "phone_number")
-    private String phone_number;
+    private String phone;
 
 }
