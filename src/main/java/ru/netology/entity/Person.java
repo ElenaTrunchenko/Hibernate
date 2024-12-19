@@ -12,22 +12,22 @@ import lombok.*;
 @NoArgsConstructor
 @Table(name = "PERSONS")
 public class Person {
-    @Id
+    @EmbeddedId
+    private PersonId personId;
+
     @Column(nullable = false, length = 100)
     private String name;
 
-    @Id
     @Column(nullable = false, length = 200)
     private String surname;
 
-    @Id
     @Column(nullable = false)
     private Integer age;
 
-    @Column(length = 50)
-    private String phoneNumber;
+    @Column(length = 50, name = "phone_number")
+    private String phone;
 
-    @Column(length = 168)
-    private String city_of_living;
+    @Column(length = 168, name = "city_of_living")
+    private String city;
 
 }
