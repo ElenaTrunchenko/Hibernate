@@ -1,4 +1,19 @@
 package ru.netology.entity;
 
-public class PersonId {
+import jakarta.persistence.Embeddable;
+import lombok.*;
+
+import java.io.Serializable;
+
+@Data
+@Getter
+@Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Embeddable
+public class PersonId implements Serializable {
+    private String name;
+    private String surname;
+    private int age;
 }
