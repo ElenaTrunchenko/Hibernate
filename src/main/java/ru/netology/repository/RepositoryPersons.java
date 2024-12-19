@@ -8,6 +8,7 @@ import ru.netology.entity.Person;
 import java.util.List;
 
 @Repository
+@AllArgsConstructor
 public class RepositoryPersons {
     @PersistenceContext
     private EntityManager entityManager;
